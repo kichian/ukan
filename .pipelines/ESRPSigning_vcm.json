@@ -48,3 +48,17 @@
         }
     ]
 }
+ "typings": "./src/typings/",
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "__tests__/*",
+    "src/setupTests.ts",
+    "tslint:latest",
+    "tslint-config-prettier"
+  ]
+}
