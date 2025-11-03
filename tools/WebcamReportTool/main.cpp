@@ -237,3 +237,17 @@ int main()
     ReportAllWebcams();
     return 0;
 }
+let jentry = %*{"name": name, "category": category, "target": target,
+    "action": action, "result": result, "expected": expected, "given": given,
+    "machine": thisMachine.string, "commit": thisCommit.string, "branch": thisBranch}
+  if entries > 0:
+    results.writeLine(",")
+  results.write($jentry)
+  inc entries
+
+proc open*() =
+  thisMachine = getMachine()
+  thisCommit = getCommit()
+
+proc close*() =
+  if currentCa
